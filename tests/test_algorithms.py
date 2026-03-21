@@ -42,3 +42,15 @@ def test_graph_k3():
     assert alg.naive_alg(k3) == expected
     assert alg.burkhard_alg(k3) == expected
     assert alg.sandia_alg(k3) == expected
+
+def test_disconnected_clusters():
+    
+    rows = [0,0,1,1,2,2, 3,3,4,4,5,5]
+    cols = [1,2,0,2,0,1, 4,5,3,5,3,4]
+    vals = [1] * 12
+    matrix = gb.Matrix.from_coo(rows, cols, vals, nrows=6, ncols=6)
+    
+    expected = 2
+    assert alg.sandia_alg(matrix) == expected
+    assert alg.burkhard_alg(matrix) == expected
+    assert alg.naive_alg(matrix) == expected
