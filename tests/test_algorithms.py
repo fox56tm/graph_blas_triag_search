@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2026 Dmitry Sergeev
 
-import pytest
+
 import graphblas as gb
 
 from src import algorithms as alg
