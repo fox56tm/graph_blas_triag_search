@@ -13,6 +13,10 @@ dependencies = [
 ]
 
 [dependency-groups]
+analysis = [
+    "matplotlib>=3.10.8",
+    "seaborn>=0.13.2",
+]
 dev = [
     "pytest>=9.0.2",
     "ruff>=0.15.7",
